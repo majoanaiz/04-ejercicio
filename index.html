@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio - [María José Anaiz]</title>
+    <title>Mi Portafolio - María José Anaiz</title>
     <!-- Carga de Tailwind CSS para estilos rápidos y responsive --><script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Tipografía moderna: Inter */
@@ -53,7 +53,7 @@
     <!-- 1. HEADER Y NAVEGACIÓN (Fijo en el tope, adaptable a móvil) --><header class="sticky top-0 z-50 bg-bg-dark shadow-lg border-b border-gray-700">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <!-- Logo o Nombre --><a href="#inicio" class="text-2xl font-bold text-primary-pink hover:text-light-pink transition duration-300">
-                [Tu Inicial]
+                MJ
             </a>
 
             <!-- Botón de Menú Móvil (Hamburguesa) --><button id="menu-button" class="md:hidden p-2 rounded-lg text-text-light hover:bg-dark-gray transition duration-300">
@@ -85,12 +85,12 @@
 
         <!-- 2. SECCIÓN DE INICIO / HERO (Presentación principal) --><section id="inicio" class="py-20 md:py-32 flex flex-col md:flex-row items-center gap-10">
             <!-- Lado de Texto --><div class="md:w-3/5 text-center md:text-left">
-                <p class="text-xl font-medium text-primary-pink mb-3">¡Hola! Soy [María José Anaiz]</p>
+                <p class="text-xl font-medium text-primary-pink mb-3">¡Hola! Soy María José Anaiz</p>
                 <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white">
-                    [Diseñadora] enfocada en <span class="text-primary-pink">funcionalidad</span>.
+                    Diseñadora enfocada en <span class="text-primary-pink">la usabilidad</span>.
                 </h1>
                 <p class="text-lg text-text-light mb-8 max-w-xl mx-auto md:mx-0">
-                    Busco un enfoque accesible, estético y centrado en el usuario.
+                   Busco un enfoque accesible, estético y centrado en el usuario.
                 </p>
                 <a href="#proyectos" class="inline-block bg-primary-pink text-bg-dark text-lg py-3 px-8 rounded-xl shadow-xl hover:bg-light-pink transition duration-300 transform hover:scale-105 font-semibold">
                     Ver mis Proyectos
@@ -98,11 +98,11 @@
             </div>
             <!-- Lado de Imagen/Avatar (Recomendación: usa una URL de tu foto o un placeholder) --><div class="md:w-2/5 mt-10 md:mt-0 flex justify-center">
                 <img 
-                    src="https://placehold.co/350x350/f3aacb/0a0a0a?text=Tu+Foto" 
+                    src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/tu_foto.jpg]" 
                     alt="Imagen de perfil de [Tu Nombre]" 
                     class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-primary-pink shadow-2xl"
                     onerror="this.onerror=null; this.src='https://placehold.co/350x350/f3aacb/0a0a0a?text=Avatar';"
-                >
+                > <!-- 💡 RECUERDA: Reemplaza SÓLO el "src" con tu ruta real. El "onerror" mantendrá el placeholder en caso de fallas. -->
             </div>
         </section>
 
@@ -112,18 +112,18 @@
             <h2 class="text-4xl font-bold text-center mb-10 text-white">Sobre Mí</h2>
             <div class="bg-dark-gray p-8 rounded-2xl shadow-xl max-w-4xl mx-auto">
                 <p class="text-lg text-text-light leading-relaxed mb-6">
-                    Soy diseñadora con formación multidisciplinaria, con experiencia en diseño gráfico, industrial, de servicios y de espacios. Me interesa crear soluciones que integren estética, funcionalidad y experiencia, entendiendo el diseño como una herramienta para mejorar la interacción entre personas, objetos y entornos. 
+                    Soy diseñadora con formación multidisciplinaria, con experiencia en diseño gráfico, industrial, de servicios y de espacios. Me interesa crear soluciones que integren estética, funcionalidad y experiencia, entendiendo el diseño como una herramienta para mejorar la interacción entre personas, objetos y entornos.
                 </p>
                 <p class="text-lg text-text-light leading-relaxed">
                     Actualmente estoy explorando el mundo textil como un medio material y conceptual para expandir mi práctica.
                 </p>
-                <!-- Opcional: Lista de Habilidades --><div class="mt-8">
+                <!-- Opcional: Mis Habilidades --><div class="mt-8">
                     <h3 class="text-2xl font-semibold mb-4 text-white">Mis habilidades</h3>
                     <div class="flex flex-wrap gap-3">
                         <span class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">Figma</span>
-                        <span class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">HTML & CSS</span>
-                        <span class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">Photoshop</span>
                         <span class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">Illustrator</span>
+                        <span class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">Photoshop</span>
+                        <span class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">HTML Y CSS</span>
                         <span class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">Prototipado</span>
                     </div>
                 </div>
@@ -132,64 +132,127 @@
 
         <hr class="border-gray-700 my-16">
 
-        <!-- 4. SECCIÓN DE PROYECTOS --><section id="proyectos" class="py-16">
-            <h2 class="text-4xl font-bold text-center mb-12 text-white">Mis Trabajos Destacados</h2>
+        <!-- 4. SECCIÓN DE PROYECTOS  --><section id="proyectos" class="py-16">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">Mis Trabajos</h2>
             <p class="text-xl text-center text-text-light mb-10 max-w-3xl mx-auto">
                 Aquí encontrarás una selección de mis proyectos más recientes. Cada uno ilustra mi proceso de diseño y mis habilidades técnicas.
             </p>
             
             <!-- CONTENEDOR DE PROYECTOS (ADAPTABLE) --><!-- La clave es usar "grid" y cambiar el número de columnas con prefijos responsive (sm:, md:) --><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- PROYECTO 1 --><div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
+                <!-- PROYECTO 1 -->
+                <div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
                     <img 
-                        src="https://placehold.co/600x400/f3aacb/0a0a0a?text=Proyecto+UX+App" 
-                        alt="https://drive.google.com/file/d/1-iOmoHcPRa-YWyfLpXmMXSEgoRUO6Jel/view?usp=drive_link" 
+                        src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/proyecto_1.png]" 
+                        alt="Imagen del Proyecto App de Movilidad Urbana" 
                         class="rounded-lg mb-4 w-full h-48 object-cover"
                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/f3aacb/0a0a0a?text=Proyecto+1';"
-                    >
-                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Lowtech</span>
-                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Micromundos</h3>
+                    > <!-- 💡 REEMPLAZA SÓLO el "src" con tu ruta real. -->
+                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Diseño gráfico/web/</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Infografía con scroll</h3>
                     <p class="text-text-light mb-4">
-                        Intervenciones artísticas que crean dioramas realistas instalados en rincones del borde costero de La Cruces. Cada escena dialoga con un poema de Nicanor Parra.
+                       Infografía con scroll realizada en figma, esta presenta el proceso de producción de Coca-cola de manera interactiva a través de "click" y "hover"
                     </p>
-                    <a href="#" class="text-primary-pink font-semibold hover:text-light-pink flex items-center">
-                       Conoce más del proyecto
+                    <!-- ENLACE CORREGIDO: Reemplaza # con tu URL de proyecto -->
+                    <a href="https://www.figma.com/proto/rfLvfKIkO6dL6g0sbVxOv5/Untitled?node-id=113-527&t=O1LaCuW0HUr58Oep-1" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center">
+                        Visitar infografía 
                         <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </div>
 
-                <!-- PROYECTO 2 --><div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
+                <!-- PROYECTO 2 -->
+                <div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
                     <img 
-                        src="https://placehold.co/600x400/ff96c5/0a0a0a?text=Landing+Page+Web" 
+                        src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/proyecto_2.png]" 
                         alt="Imagen del Proyecto Landing Page con HTML/CSS" 
                         class="rounded-lg mb-4 w-full h-48 object-cover"
                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/ff96c5/0a0a0a?text=Proyecto+2';"
-                    >
-                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Diseño gráfico/web</span>
-                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Infografía con scroll</h3>
+                    > <!-- 💡 REEMPLAZA SÓLO el "src" con tu ruta real. -->
+                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Lowtech</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Micromundos</h3>
                     <p class="text-text-light mb-4">
-                        Infografía con scroll realizada en figma que rpesenta el proceso de producción de coca-cola a través de "click" y "hover"
+                       Intervenciones artísticas que crean dioramas realistas instalados en rincones del borde costero de La Cruces. Cada escena dialoga con un poema de Nicanor Parra.
                     </p>
-                    <a href="#" class="text-primary-pink font-semibold hover:text-light-pink flex items-center">
-                        Ver Código 
+                    <!-- ENLACE CORREGIDO: Reemplaza # con tu URL de proyecto -->
+                    <a href="https://biologia.uc.cl/litoralis-ciencia-diseno-y-comunidad-en-ecim-para-imaginar-el-futuro-del-litoral-de-los-poetas/" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center">
+                        Conoce más del proyecto
                         <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </div>
 
-                <!-- PROYECTO 3 --><div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
+                <!-- PROYECTO 3 -->
+                <div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
                     <img 
-                        src="https://placehold.co/600x400/fbd5e5/0a0a0a?text=Ilustracion+Digital" 
-                        alt="https://drive.google.com/file/d/1_H1bVdf10rQdgXLUVX4tYRo4sORRt3uF/view?usp=drive_link" 
+                        src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/proyecto_3.png]" 
+                        alt="Imagen del Proyecto Serie de Ilustraciones Minimalistas" 
                         class="rounded-lg mb-4 w-full h-48 object-cover"
                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/fbd5e5/0a0a0a?text=Proyecto+3';"
-                    >
-                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Diseño Gráfico</span>
-                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Infografía informativa</h3>
+                    > <!-- 💡 REEMPLAZA SÓLO el "src" con tu ruta real. -->
+                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Diseño de servios</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Orpheo</h3>
                     <p class="text-text-light mb-4">
-                        Infografía con estadísticas y métodos de prevención de la exclusión escolar. 
+                        Diseño de tecnología que permite crear un recorrido inmersivo a través de los sentidos que estimula la experiencia de visitar el teatro Zoco.
                     </p>
-                    <a href="#" class="text-primary-pink font-semibold hover:text-light-pink flex items-center">
-                        Leer más
+                    <!-- ENLACE CORREGIDO: Reemplaza # con tu URL de proyecto -->
+                    <a href="[PON AQUÍ EL ENLACE REAL A ESTE PROYECTO, EJ: https://dribbble.com/tu_ilustracion]" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center">
+                        Ver Galería 
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- NUEVO PROYECTO 4 -->
+                <div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
+                    <img 
+                        src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/proyecto_4.png]" 
+                        alt="Imagen del Proyecto Sistema de Diseño" 
+                        class="rounded-lg mb-4 w-full h-48 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/ff96c5/0a0a0a?text=Proyecto+4';"
+                    >
+                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Sistema de Diseño</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Creación de Design System</h3>
+                    <p class="text-text-light mb-4">
+                        Desarrollo de una biblioteca de componentes reutilizables y guía de estilos para escalar productos digitales.
+                    </p>
+                    <a href="[PON AQUÍ EL ENLACE REAL A ESTE PROYECTO, EJ: https://dribbble.com/tu_design_system]" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center">
+                        Ver Documentación
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- NUEVO PROYECTO 5 -->
+                <div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
+                    <img 
+                        src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/proyecto_5.png]" 
+                        alt="Imagen del Proyecto E-commerce con animaciones" 
+                        class="rounded-lg mb-4 w-full h-48 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/fbd5e5/0a0a0a?text=Proyecto+5';"
+                    >
+                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Front-End Avanzado</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">E-commerce con React</h3>
+                    <p class="text-text-light mb-4">
+                        Desarrollo de una tienda virtual moderna con carrito de compras funcional y gestión de estados.
+                    </p>
+                    <a href="[PON AQUÍ EL ENLACE REAL A ESTE PROYECTO, EJ: https://github.com/tu_ecommerce_repo]" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center">
+                        Ver Demo
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- NUEVO PROYECTO 6 -->
+                <div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
+                    <img 
+                        src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/proyecto_6.png]" 
+                        alt="Imagen del Proyecto Ilustración 3D" 
+                        class="rounded-lg mb-4 w-full h-48 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/f3aacb/0a0a0a?text=Proyecto+6';"
+                    >
+                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Diseño 3D</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Visualización de Producto en 3D</h3>
+                    <p class="text-text-light mb-4">
+                        Modelado y renderizado de un producto electrónico minimalista usando Blender y post-producción digital.
+                    </p>
+                    <a href="[PON AQUÍ EL ENLACE REAL A ESTE PROYECTO, EJ: https://behance.net/tu_render_3d]" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center">
+                        Ver Renders
                         <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </div>

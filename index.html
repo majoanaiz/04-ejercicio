@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio - [Tu Nombre]</title>
+    <!-- Carga de Tailwind CSS para estilos rápidos y responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Tipografía moderna: Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7; /* Fondo gris claro */
+            color: #1f2937; /* Texto oscuro */
+        }
+        /* Estilos específicos para la navegación y efecto hover */
+        .nav-link {
+            transition: color 0.3s, transform 0.3s;
+        }
+        .nav-link:hover {
+            color: #4f46e5; /* Morado en hover */
+            transform: translateY(-2px);
+        }
+        /* Clase para destacar elementos interactivos */
+        .card-project {
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .card-project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(79, 70, 229, 0.2); /* Sombra morada suave */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#4f46e5',
+                        'secondary-gray': '#6b7280',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <!-- 1. HEADER Y NAVEGACIÓN (Fijo en el tope, adaptable a móvil) -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo o Nombre -->
+            <a href="#inicio" class="text-2xl font-bold text-primary-blue hover:text-indigo-700 transition duration-300">
+                [Tu Inicial]
+            </a>
+
+            <!-- Menú de Navegación (visible en escritorio) -->
+            <div class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#inicio" class="nav-link text-secondary-gray">Inicio</a>
+                <a href="#sobre-mi" class="nav-link text-secondary-gray">Sobre Mí</a>
+                <a href="#proyectos" class="nav-link text-secondary-gray">Proyectos</a>
+                <a href="#contacto" class="nav-link text-secondary-gray">Contacto</a>
+            </div>
+
+            <!-- Botón de Contacto Destacado (visible en escritorio) -->
+            <a href="#contacto" class="hidden md:block bg-primary-blue text-white py-2 px-5 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 font-medium">
+                Hablemos
+            </a>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- 2. SECCIÓN DE INICIO / HERO (Presentación principal) -->
+        <section id="inicio" class="py-20 md:py-32 flex flex-col md:flex-row items-center gap-10">
+            <!-- Lado de Texto -->
+            <div class="md:w-3/5 text-center md:text-left">
+                <p class="text-xl font-medium text-primary-blue mb-3">¡Hola! Soy [Tu Nombre]</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    [Tu Profesión/Rol] enfocada en <span class="text-primary-blue">la usabilidad</span>.
+                </h1>
+                <p class="text-lg text-secondary-gray mb-8 max-w-xl mx-auto md:mx-0">
+                    Diseñando y construyendo experiencias digitales que son intuitivas, accesibles y centradas en el usuario.
+                </p>
+                <a href="#proyectos" class="inline-block bg-primary-blue text-white text-lg py-3 px-8 rounded-xl shadow-xl hover:bg-indigo-700 transition duration-300 transform hover:scale-105 font-semibold">
+                    Ver mis Proyectos
+                </a>
+            </div>
+            <!-- Lado de Imagen/Avatar (Recomendación: usa una URL de tu foto o un placeholder) -->
+            <div class="md:w-2/5 mt-10 md:mt-0 flex justify-center">
+                <img 
+                    src="https://placehold.co/350x350/E0E7FF/4f46e5?text=Tu+Foto" 
+                    alt="" 
+                    class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-primary-blue shadow-2xl"
+                    onerror="this.onerror=null; this.src='https://placehold.co/350x350/E0E7FF/4f46e5?text=Avatar';"
+                >
+            </div>
+        </section>
+
+        <hr class="border-gray-300 my-16">
+
+        <!-- 3. SECCIÓN SOBRE MÍ (Para establecer tu perfil profesional) -->
+        <section id="sobre-mi" class="py-16">
+            <h2 class="text-4xl font-bold text-center mb-10">Sobre Mí</h2>
+            <div class="bg-white p-8 rounded-2xl shadow-xl max-w-4xl mx-auto">
+                <p class="text-lg text-secondary-gray leading-relaxed mb-6">
+                    Desde pequeña me ha fascinado la forma en que las personas interactúan con los objetos y las interfaces. Mi enfoque profesional se centra en comprender las necesidades humanas para traducirlas en soluciones digitales funcionales y estéticas.
+                </p>
+                <p class="text-lg text-secondary-gray leading-relaxed">
+                    Tengo experiencia en [menciona un área clave, ej: investigación de usuarios, prototipado y diseño front-end]. Estoy lista para contribuir a proyectos que busquen hacer una diferencia real en la vida de los usuarios.
+                </p>
+                <!-- Opcional: Lista de Habilidades -->
+                <div class="mt-8">
+                    <h3 class="text-2xl font-semibold mb-4">Mis Herramientas Favoritas</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-indigo-100 text-primary-blue px-4 py-1 rounded-full text-sm font-medium">Figma</span>
+                        <span class="bg-indigo-100 text-primary-blue px-4 py-1 rounded-full text-sm font-medium">HTML & CSS</span>
+                        <span class="bg-indigo-100 text-primary-blue px-4 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                        <span class="bg-indigo-100 text-primary-blue px-4 py-1 rounded-full text-sm font-medium">Investigación UX</span>
+                        <span class="bg-indigo-100 text-primary-blue px-4 py-1 rounded-full text-sm font-medium">Prototipado</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-gray-300 my-16">
+
+        <!-- 4. SECCIÓN DE PROYECTOS (La más importante, siguiendo la corrección de Nao) -->
+        <section id="proyectos" class="py-16">
+            <h2 class="text-4xl font-bold text-center mb-12">Mis Trabajos Destacados</h2>
+            <p class="text-xl text-center text-secondary-gray mb-10 max-w-3xl mx-auto">
+                Aquí encontrarás una selección de mis proyectos más recientes. Cada uno ilustra mi proceso de diseño y mis habilidades técnicas.
+            </p>
+            
+            <!-- CONTENEDOR DE PROYECTOS (ADAPTABLE) -->
+            <!-- La clave es usar "grid" y cambiar el número de columnas con prefijos responsive (sm:, md:) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- PROYECTO 1 -->
+                <div class="card-project bg-white p-6 rounded-xl border border-gray-200">
+                    <img 
+                        src="https://placehold.co/600x400/818CF8/ffffff?text=Proyecto+UX+App" 
+                        alt="" 
+                        class="rounded-lg mb-4 w-full h-48 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/818CF8/ffffff?text=Proyecto+1';"
+                    >
+                    <span class="text-xs font-semibold uppercase tracking-wider text-primary-blue bg-indigo-50 px-2 py-1 rounded-full">Diseño UX</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-2">App de Movilidad Urbana</h3>
+                    <p class="text-secondary-gray mb-4">
+                        Investigación completa sobre el dolor de usuario en el transporte público y propuesta de solución con prototipo funcional.
+                    </p>
+                    <a href="#" class="text-primary-blue font-semibold hover:text-indigo-700 flex items-center">
+                        Ver Caso de Estudio 
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- PROYECTO 2 -->
+                <div class="card-project bg-white p-6 rounded-xl border border-gray-200">
+                    <img 
+                        src="https://placehold.co/600x400/A78BFA/ffffff?text=Landing+Page+Web" 
+                        alt="[Image of Landing Page]" 
+                        class="rounded-lg mb-4 w-full h-48 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/A78BFA/ffffff?text=Proyecto+2';"
+                    >
+                    <span class="text-xs font-semibold uppercase tracking-wider text-primary-blue bg-indigo-50 px-2 py-1 rounded-full">Front-End</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-2">Landing Page con HTML/CSS</h3>
+                    <p class="text-secondary-gray mb-4">
+                        Implementación de un diseño moderno y responsive utilizando HTML semántico y flexbox/grid para el layout.
+                    </p>
+                    <a href="#" class="text-primary-blue font-semibold hover:text-indigo-700 flex items-center">
+                        Ver Código 
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- PROYECTO 3 -->
+                <div class="card-project bg-white p-6 rounded-xl border border-gray-200">
+                    <img 
+                        src="https://placehold.co/600x400/C4B5FD/ffffff?text=Ilustracion+Digital" 
+                        alt="" 
+                        class="rounded-lg mb-4 w-full h-48 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/C4B5FD/ffffff?text=Proyecto+3';"
+                    >
+                    <span class="text-xs font-semibold uppercase tracking-wider text-primary-blue bg-indigo-50 px-2 py-1 rounded-full">Diseño Gráfico</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-2">Serie de Ilustraciones Minimalistas</h3>
+                    <p class="text-secondary-gray mb-4">
+                        Conjunto de ilustraciones creadas para una marca de productos ecológicos, enfocadas en la simplicidad y el color.
+                    </p>
+                    <a href="#" class="text-primary-blue font-semibold hover:text-indigo-700 flex items-center">
+                        Ver Galería 
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        
+        <hr class="border-gray-300 my-16">
+
+        <!-- 5. SECCIÓN DE CONTACTO (Llamada a la acción final) -->
+        <section id="contacto" class="py-16">
+            <div class="bg-primary-blue p-10 rounded-2xl text-center max-w-4xl mx-auto shadow-2xl">
+                <h2 class="text-4xl font-bold text-white mb-4">¿Hacemos algo increíble?</h2>
+                <p class="text-xl text-indigo-200 mb-8">
+                    Estoy abierta a nuevas oportunidades de colaboración y proyectos retadores.
+                </p>
+                <!-- Botón de Contacto: Puedes poner tu email o un enlace a LinkedIn -->
+                <a href="mailto:tuemail@ejemplo.com" class="inline-block bg-white text-primary-blue text-lg py-3 px-8 rounded-xl shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105 font-semibold">
+                    Enviar un Email
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 6. FOOTER (Pie de página) -->
+    <footer class="bg-gray-800 text-white mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm">
+            <p>&copy; <span id="year"></span> [Tu Nombre] | Portafolio Profesional.</p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="#" class="hover:text-primary-blue transition">LinkedIn</a>
+                <a href="#" class="hover:text-primary-blue transition">Behance</a>
+                <a href="#" class="hover:text-primary-blue transition">GitHub</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Actualiza el año en el footer automáticamente
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

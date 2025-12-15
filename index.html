@@ -1,383 +1,180 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Mi Portafolio - María José Anaiz</title>
-
-    <!-- Carga de Tailwind CSS para estilos rápidos y responsive -->
-
     <script src="https://cdn.tailwindcss.com"></script>
-
     <style>
-
         /* Tipografía moderna: Inter */
-
         body {
-
             font-family: 'Inter', sans-serif;
-
-            background-color: #0a0a0a; /* Fondo negro suave */
-
-            color: #e5e7eb; /* Texto gris muy claro para contraste */
-
+            background-color: #0a0a0a;
+            /* Fondo negro suave */
+            color: #e5e7eb;
+            /* Texto gris muy claro para contraste */
         }
 
         /* Estilos específicos para la navegación y efecto hover */
-
         .nav-link {
-
             transition: color 0.3s, transform 0.3s;
-
         }
 
         .nav-link:hover {
-
-            color: #ff96c5; /* Rosa vibrante en hover */
-
+            color: #ff96c5;
+            /* Rosa vibrante en hover */
             transform: translateY(-2px);
-
         }
 
         /* Clase para destacar elementos interactivos */
-
         .card-project {
-
             transition: all 0.3s;
-
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra más oscura para fondo negro */
-
-            background-color: #1f2937; /* Fondo de tarjeta oscuro */
-
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            /* Sombra más oscura para fondo negro */
+            background-color: #1f2937;
+            /* Fondo de tarjeta oscuro */
         }
 
         .card-project:hover {
-
             transform: translateY(-5px);
-
-            box-shadow: 0 10px 15px rgba(255, 150, 197, 0.3); /* Sombra rosa en hover */
-
+            box-shadow: 0 10px 15px rgba(255, 150, 197, 0.3);
+            /* Sombra rosa en hover */
         }
-
     </style>
-
     <script>
-
         tailwind.config = {
-
             theme: {
-
                 extend: {
-
                     colors: {
-
-                        'primary-pink': '#ff96c5', /* Rosa vibrante para acentos */
-
-                        'secondary-pink': '#f3aacb', /* Rosa medio para fondos */
-
-                        'light-pink': '#fbd5e5', /* Rosa muy claro para textos claros */
-
-                        'dark-gray': '#1f2937', /* Gris oscuro para elementos secundarios */
-
-                        'text-light': '#e5e7eb', /* Gris muy claro para textos */
-
-                        'bg-dark': '#0a0a0a', /* Fondo general negro suave */
-
+                        'primary-pink': '#ff96c5',
+                        /* Rosa vibrante para acentos */
+                        'secondary-pink': '#f3aacb',
+                        /* Rosa medio para fondos */
+                        'light-pink': '#fbd5e5',
+                        /* Rosa muy claro para textos claros */
+                        'dark-gray': '#1f2937',
+                        /* Gris oscuro para elementos secundarios */
+                        'text-light': '#e5e7eb',
+                        /* Gris muy claro para textos */
+                        'bg-dark': '#0a0a0a',
+                        /* Fondo general negro suave */
                     }
-
                 }
-
             }
-
         }
-
     </script>
-
 </head>
 
 <body class="antialiased">
 
-
-
-    <!-- 1. HEADER Y NAVEGACIÓN (Fijo en el tope, adaptable a móvil) -->
-
     <header class="sticky top-0 z-50 bg-bg-dark shadow-lg border-b border-gray-700">
-
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-
-            <!-- Logo o Nombre -->
-
-            <a href="#inicio" class="text-2xl font-bold text-primary-pink hover:text-light-pink transition duration-300">
-
+            <a href="#inicio"
+                class="text-2xl font-bold text-primary-pink hover:text-light-pink transition duration-300">
                 MJ
-
             </a>
 
-
-
-            <!-- Botón de Menú Móvil (Hamburguesa) -->
-
-            <button id="menu-button" class="md:hidden p-2 rounded-lg text-text-light hover:bg-dark-gray transition duration-300">
-
-                <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-
-                <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-
+            <button id="menu-button"
+                class="md:hidden p-2 rounded-lg text-text-light hover:bg-dark-gray transition duration-300">
+                <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+                <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
             </button>
 
-
-
-            <!-- Menú de Navegación (visible en escritorio, oculto por defecto en móvil) -->
-
             <div id="nav-menu" class="hidden md:flex space-x-8 text-lg font-medium">
-
                 <a href="#inicio" class="nav-link text-text-light">Inicio</a>
-
                 <a href="#sobre-mi" class="nav-link text-text-light">Sobre Mí</a>
-
                 <a href="#proyectos" class="nav-link text-text-light">Proyectos</a>
-
                 <a href="#contacto" class="nav-link text-text-light">Contacto</a>
-
             </div>
 
-
-
-            <!-- Botón de Contacto Destacado (visible en escritorio) -->
-
-            <a href="#contacto" class="hidden md:block bg-primary-pink text-bg-dark py-2 px-5 rounded-lg shadow-lg hover:bg-light-pink transition duration-300 font-medium">
-
+            <a href="#contacto"
+                class="hidden md:block bg-primary-pink text-bg-dark py-2 px-5 rounded-lg shadow-lg hover:bg-light-pink transition duration-300 font-medium">
                 Hablemos
-
             </a>
-
         </nav>
 
-        
-
-        <!-- Menú Móvil Desplegable (Fuera del nav principal, visible solo en móvil) -->
-
         <div id="mobile-menu" class="md:hidden hidden bg-bg-dark border-t border-gray-700">
-
-            <a href="#inicio" class="block py-3 px-6 text-text-light hover:bg-dark-gray transition duration-300 border-b border-gray-700" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Inicio</a>
-
-            <a href="#sobre-mi" class="block py-3 px-6 text-text-light hover:bg-dark-gray transition duration-300 border-b border-gray-700" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Sobre Mí</a>
-
-            <a href="#proyectos" class="block py-3 px-6 text-text-light hover:bg-dark-gray transition duration-300 border-b border-gray-700" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Proyectos</a>
-
-            <a href="#contacto" class="block py-3 px-6 text-text-light hover:bg-dark-gray transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contacto</a>
-
+            <a href="#inicio"
+                class="block py-3 px-6 text-text-light hover:bg-dark-gray transition duration-300 border-b border-gray-700"
+                onclick="document.getElementById('mobile-menu').classList.add('hidden')">Inicio</a>
+            <a href="#sobre-mi"
+                class="block py-3 px-6 text-text-light hover:bg-dark-gray transition duration-300 border-b border-gray-700"
+                onclick="document.getElementById('mobile-menu').classList.add('hidden')">Sobre Mí</a>
+            <a href="#proyectos"
+                class="block py-3 px-6 text-text-light hover:bg-dark-gray transition duration-300 border-b border-gray-700"
+                onclick="document.getElementById('mobile-menu').classList.add('hidden')">Proyectos</a>
+            <a href="#contacto" class="block py-3 px-6 text-text-light hover:bg-dark-gray transition duration-300"
+                onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contacto</a>
         </div>
-
     </header>
-
-
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-
-
-        <!-- 2. SECCIÓN DE INICIO / HERO (Presentación principal) -->
-
         <section id="inicio" class="py-20 md:py-32 flex flex-col md:flex-row items-center gap-10">
-
-            <!-- Lado de Texto -->
-
             <div class="md:w-3/5 text-center md:text-left">
-
                 <p class="text-xl font-medium text-primary-pink mb-3">¡Hola! Soy María José Anaiz</p>
-
                 <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white">
-
                     Diseñadora enfocada en <span class="text-primary-pink">la usabilidad</span>.
-
                 </h1>
-
                 <p class="text-lg text-text-light mb-8 max-w-xl mx-auto md:mx-0">
-
                     Busco un enfoque accesible, estético y centrado en el usuario.
-
                 </p>
-
-                <a href="#proyectos" class="inline-block bg-primary-pink text-bg-dark text-lg py-3 px-8 rounded-xl shadow-xl hover:bg-light-pink transition duration-300 transform hover:scale-105 font-semibold">
-
+                <a href="#proyectos"
+                    class="inline-block bg-primary-pink text-bg-dark text-lg py-3 px-8 rounded-xl shadow-xl hover:bg-light-pink transition duration-300 transform hover:scale-105 font-semibold">
                     Ver mis Proyectos
-
                 </a>
-
             </div>
-
-            <!-- Lado de Imagen/Avatar (Recomendación: usa una URL de tu foto o un placeholder) -->
-
             <div class="md:w-2/5 mt-10 md:mt-0 flex justify-center">
-
-                <img 
-
-                    src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/tu_foto.jpg]" 
-
-                    alt="Imagen de perfil de María José Anaiz" 
-
+                <img src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/tu_foto.jpg]" alt="Imagen de perfil de María José Anaiz"
                     class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-primary-pink shadow-2xl"
-
                     onerror="this.onerror=null; this.src='https://placehold.co/350x350/f3aacb/0a0a0a?text=Avatar';"
-
-                > <!-- 💡 RECUERDA: Reemplaza SÓLO el "src" con tu ruta real. El "onerror" mantendrá el placeholder en caso de fallas. -->
-
-            </div>
-
+                    loading="lazy">
+                </div>
         </section>
 
-
-
         <hr class="border-gray-700 my-16">
-
-
-
-        <!-- 3. SECCIÓN SOBRE MÍ (Para establecer tu perfil profesional) -->
 
         <section id="sobre-mi" class="py-16">
-
             <h2 class="text-4xl font-bold text-center mb-10 text-white">Sobre Mí</h2>
-
             <div class="bg-dark-gray p-8 rounded-2xl shadow-xl max-w-4xl mx-auto">
-
                 <p class="text-lg text-text-light leading-relaxed mb-6">
-
-                    Soy diseñadora con formación multidisciplinaria, con experiencia en diseño gráfico, industrial, de servicios y de espacios. Me interesa crear soluciones que integren estética, funcionalidad y experiencia, entendiendo el diseño como una herramienta para mejorar la interacción entre personas, objetos y entornos.
-
+                    Soy diseñadora con formación multidisciplinaria, con experiencia en diseño gráfico, industrial, de
+                    servicios y de espacios. Me interesa crear soluciones que integren estética, funcionalidad y
+                    experiencia, entendiendo el diseño como una herramienta para mejorar la interacción entre personas,
+                    objetos y entornos.
                 </p>
-
                 <p class="text-lg text-text-light leading-relaxed">
-
-                    Actualmente estoy explorando el mundo textil como un medio material y conceptual para expandir mi práctica.
-
+                    Actualmente estoy explorando el mundo textil como un medio material y conceptual para expandir mi
+                    práctica.
                 </p>
-
-                <!-- Opcional: Mis Habilidades -->
-
                 <div class="mt-8">
-
                     <h3 class="text-2xl font-semibold mb-4 text-white">Mis habilidades</h3>
-
                     <div class="flex flex-wrap gap-3">
-
-                        <span class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">Figma</span>
-
-                        <span class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">Illustrator</span>
-
-                        <span class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">Photoshop</span>
-
-                        <span class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">HTML Y CSS</span>
-
-                        <span class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">Prototipado</span>
-
+                        <span
+                            class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">Figma</span>
+                        <span
+                            class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">Illustrator</span>
+                        <span
+                            class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">Photoshop</span>
+                        <span class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">HTML Y
+                            CSS</span>
+                        <span
+                            class="bg-secondary-pink text-dark-gray px-4 py-1 rounded-full text-sm font-medium">Prototipado</span>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
-
-
 
         <hr class="border-gray-700 my-16">
 
-
-
-        <!-- 4. SECCIÓN DE PROYECTOS -->
-
         <section id="proyectos" class="py-16">
-
             <h2 class="text-4xl font-bold text-center mb-12 text-white">Mis Trabajos</h2>
-
-            <p class="text-xl text-center text-text-light mb-10 max-w-3xl mx-auto">
-
-                Aquí encontrarás una selección de mis proyectos más recientes. Cada uno ilustra mi proceso de diseño y mis habilidades técnicas.
-
-            </p>
-
-            
-
-            <!-- CONTENEDOR DE PROYECTOS (ADAPTABLE) -->
-
-            <!-- La clave es usar "grid" y cambiar el número de columnas con prefijos responsive (sm:, md:) -->
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                
-
-                <!-- PROYECTO 1 -->
-
-                <div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
-
-                    <img 
-
-                        src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/proyecto_1.png]" 
-
-                        alt="Imagen del Proyecto Infografía con Scroll" 
-
-                        class="rounded-lg mb-4 w-full h-48 object-cover"
-
-                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/f3aacb/0a0a0a?text=Proyecto+1';"
-
-                    > <!-- 💡 REEMPLAZA SÓLO el "src" con tu ruta real. -->
-
-                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Diseño gráfico/web/</span>
-
-                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Infografía con scroll</h3>
-
-                    <p class="text-text-light mb-4">
-
-                        Infografía con scroll realizada en figma, esta presenta el proceso de producción de Coca-cola de manera interactiva a través de "click" y "hover"
-
-                    </p>
-
-                    <!-- ENLACE CORREGIDO: Reemplaza # con tu URL de proyecto -->
-
-                    <a href="https://www.figma.com/proto/rfLvfKIkO6dL6g0sbVxOv5/Untitled?node-id=113-527&t=O1LaCuW0HUr58Oep-1" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center">
-
-                        Visitar infografía 
-
-                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-
-                    </a>
-
-                </div>
-
-
-
-                <!-- PROYECTO 2 -->
-
-                <div class="card-project bg-dark-gray p-6 rounded-xl border border-gray-700">
-
-                    <img 
-
-                        src="[PON AQUÍ LA RUTA REAL, EJ: ./assets/proyecto_2.png]" 
-
-                        alt="Imagen del Proyecto Micromundos Lowtech" 
-
-                        class="rounded-lg mb-4 w-full h-48 object-cover"
-
-                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/ff96c5/0a0a0a?text=Proyecto+2';"
-
-                    > <!-- 💡 REEMPLAZA SÓLO el "src" con tu ruta real. -->
-
-                    <span class="text-xs font-semibold uppercase tracking-wider text-bg-dark bg-secondary-pink px-2 py-1 rounded-full">Lowtech</span>
-
-                    <h3 class="text-2xl font-bold mt-2 mb-2 text-white">Micromundos</h3>
-
-                    <p class="text-text-light mb-4">
-
-                        Intervenciones artísticas que crean dioramas realistas instalados en rincones del borde costero de La Cruces. Cada escena dialoga con un poema de Nicanor Parra.
-
-                    </p>
-
-                    <!-- ENLACE CORREGIDO: Reemplaza # con tu URL de proyecto -->
-
-                    <a href="https://biologia.uc.cl/litoralis-ciencia-diseno-y-comunidad-en-ecim-para-imaginar-el-futuro-del-litoral-de-los-poetas/" target="_blank" class="text-primary-pink font-semibold hover:text-light-pink flex items-center">
+            <p class="text-xl text-center text-text-light mb
